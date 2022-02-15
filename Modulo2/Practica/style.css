@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    display: flex;
+}
+
+.hotel-item {
+    margin: 0px 16px 16px 16px;
+    padding: 0px 16px 16px 16px;
+    display: flexbox;
+    border-radius: 2px;
+    border: 1px #a5a5a5 solid;
+    background-color: #f2f2f2;
+    flex: 50%;
+    box-sizing: border-box;
+}
+
+.score {
+    margin: 0px 16px 16px 16px;
+    padding: 0px 16px 16px 16px;
+    display: flexbox;
+    border-radius: 2px;
+    border: 1px #a5a5a5 solid;
+    background-color: #f2f2f2;
+    flex: 50%;
+    box-sizing: border-box;
+}
+
+.title {
+    margin: 16px;
+}
+
+.image {
+    display: flexbox;
+    flex: 25%;
+    height: 200px;
+    width: 400px;
+  }
+
+.data {
+
+
+    display: flexbox;
+    flex: 25%;
+  }
+
+  .stars span {
+    color: chocolate;
+    font-size: 20px;
+  }
