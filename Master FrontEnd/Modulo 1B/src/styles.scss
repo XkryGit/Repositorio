@@ -1,0 +1,189 @@
+//-- Header --//
+
+.toolbar{
+    display: flex;
+    justify-content: space-between;
+    height: 5vh;
+    input{
+        margin: 10px;
+        }
+    div{
+        margin: 10px; 
+    }
+}
+
+
+
+.page-title{
+    background-color: rgb(144, 212, 41);
+    padding: 10px;
+    color: white;
+}
+
+//-- Body --//
+
+body{
+    font-family: Helvetica, sans-serif;
+    margin: 0px;
+}
+
+
+
+.page-container{
+    display: inline-flex;
+}
+
+.menu-container{
+background-color: darkolivegreen;
+height: 100%;
+width: 15vw;
+}
+
+.menu-title{
+display: flex;
+justify-content: center;
+padding: 10px;
+color: white;
+font-weight: bolder;
+position: sticky;
+top: 0px;
+}
+
+.menu-framework{
+display: block;
+position: sticky;
+top: 40px;
+}
+
+.frameworks{
+    color: darkolivegreen;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    background-color: khaki;
+    border: none;
+    margin-bottom: 2px;
+    padding: 5px;
+    width: 15vw;
+    }
+
+main{
+    display: flex;
+    background-color:rgb(216, 216, 216);
+}
+
+.list{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    height: 100%;
+    min-height: 100vh;
+}
+
+.carditem{
+    display: flex;
+    flex-direction: column ;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+    margin: 20px
+}
+
+.member-name{
+    color:rgb(79, 79, 79);
+    margin: 10px;
+    font-weight: 700;
+    font-size:small;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-wrap:wrap;
+}
+
+//-- Footer --//
+
+footer{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    background-color: rgb(144, 212, 41);
+    color: white;
+    height: 5vh;
+    padding-left: 10px;
+}
+
+
+//-- movile size --//
+
+@media (max-width: 768px) {
+
+    .toolbar{
+        display: none;
+    }
+
+    .page-title{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 5vh;
+    }
+
+    .page-container{
+        flex-direction: column;
+        nav{
+            position:sticky;
+            top: 0px;
+        }
+    }
+    
+
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu-container{
+        height: 5vh;
+        width: 98vw;
+        display: block;
+    }
+
+    .menu-framework{
+        display: flex;
+        justify-content: space-around;
+        padding-top:7px;
+        top: 0px;
+    }
+
+    .frameworks{
+        display: flex;
+        justify-content: center;       
+        width: 20vw;
+            }
+
+    .menu-title{
+        display: none;
+    }
+    
+    .list{
+        flex-direction: column;
+        :last-child{
+            margin-bottom: 20px;
+        }
+    }
+    
+    .carditem{
+        width: 90vw;
+        margin-bottom: 0px;
+    }
+
+        footer{
+     align-content: center; 
+    }
+
+    }
