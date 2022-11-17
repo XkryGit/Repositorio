@@ -1,0 +1,15 @@
+<body>
+  <app-logo></app-logo>
+  <div>
+    <ng-template [ngIf]="authService.isLogged"
+      ><p class="user">{{ this.authService.getUsername() }}</p></ng-template
+    >
+    <p routerLink="/dashboard" routerLinkActive="selected">Dashboard</p>
+    <p routerLink="/gallery" routerLinkActive="selected">Gallery</p>
+    <p routerLink="/crud" routerLinkActive="selected">CRUD</p>
+    <p routerLink="/profile" routerLinkActive="selected">Profile</p>
+    <ng-template [ngIf]="authService.isLogged"
+      ><button (click)="authService.logout()">Logout</button></ng-template
+    >
+  </div>
+</body>
