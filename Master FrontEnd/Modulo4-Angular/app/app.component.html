@@ -1,7 +1,0 @@
-<div *ngIf="authService.isLogged; else elseBlock">
-  <app-header-private></app-header-private>
-</div>
-<ng-template #elseBlock><app-header-public></app-header-public></ng-template>
-
-<router-outlet></router-outlet>
-<app-footer></app-footer>
