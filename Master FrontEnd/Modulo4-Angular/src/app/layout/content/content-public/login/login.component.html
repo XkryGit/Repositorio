@@ -1,0 +1,60 @@
+<body>
+  <div class="help">
+    <p>master@gmail.com</p>
+    <p>adolfo@gmail.com</p>
+    <p>12345678</p>
+  </div>
+  <br />
+  <form>
+    <div>
+      <p>Username</p>
+      <input
+        type="username"
+        placeholder="Username"
+        name="Username"
+        [(ngModel)]="user.username"
+        #username="ngModel"
+        required
+        minlength="4"
+        pattern="^[a-z0-9](\.?[a-z0-9]){5,}@g(oogle)?mail\.com$"
+      />
+      <p class="error" *ngIf="username.errors && username.touched">
+        Username is not mail.
+      </p>
+    </div>
+    <div>
+      <p>Password</p>
+      <input
+        type="text"
+        placeholder="Password"
+        name="Password"
+        [(ngModel)]="user.password"
+        required
+        #password="ngModel"
+      />
+      <p class="error" *ngIf="password.errors && password.touched">
+        Password is required.
+      </p>
+    </div>
+    <div>
+      <button
+        type="submit"
+        (click)="loginService(user.username, user.password)"
+      >
+        Login servicio
+      </button>
+    </div>
+    <p
+      class="error"
+      *ngIf="
+        username.touched &&
+        username.dirty &&
+        password.invalid &&
+        password.touched &&
+        password.dirty
+      "
+    >
+      Username or Password is not valid.
+    </p>
+  </form>
+</body>
